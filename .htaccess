@@ -1,0 +1,19 @@
+
+Options +Indexes
+
+DirectoryIndex index.html
+
+<IfModule mod_setenvif.c>
+    <IfModule mod_autoindex.c>
+        SetEnvIfNoCase User-Agent "Googlebot" crawl_delay_bot
+
+       <Files robots.txt>
+            Order Allow,Deny
+            Allow from all
+        </Files>
+    </IfModule>
+</IfModule>
+
+
+Order Allow,Deny
+Allow from all
